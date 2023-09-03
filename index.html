@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-stone-200 flex flex-col">
+  <section id="carrinho" class="fixed top-0 right-[-360px] bg-stone-950 h-screen w-[360px] text-slate-200 z-50 duration-200 border-l border-slate-200 p-5 flex flex-col justify-between">
+    <div id="cabecalho carrinho" class="flex justify-between m-4">
+      <p>my shopping bag</p>
+      <button id="fechar-carrinho">
+        <i class="fa-solid fa-rectangle-xmark"></i>
+      </button>
+    </div>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
+    <p id="preco-total" class="bg-slate-200 text-stone-950 rounded-sm pl-3">Subtotal: $200</p>
+    <button id="finalizar-compra" class="bg-slate-200 text-stone-950 p-2 hover:text-slate-200 hover:bg-stone-700">checkout</button>
+  </section>
+  <header class="flex text-xl bg-stone-950 shadow-stone-500 shadow-lg px-6 py-4 justify-between sticky top-0 z-10">
+  <a href="./">
+    <img class='h-20' src="./assets/logo/pittisports4.png" alt="Logo do Magazine hashtag." />
+  </a>
+    <div class="text-slate-100 flex gap-2 items-end mx-2">
+      <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-bag-shopping"></i></button>
+      <a href="/pedidos.html">
+      <button class="mr-2"><i class="fa-solid fa-user"></i></button>
+      </a>
+    </div>
+  </header>
+  <main class=" flex flex-col items-center bg-stone-200">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">      
+        <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked />
+        <label for="exibir-todos" class="peer-checked:bg-stone-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">All</label>
+      </div>
+      <div class="px-2">
+        <input id="exibir-masculinos" type="radio" name="filtro" class="peer hidden" />
+        <label for="exibir-masculinos" class="peer-checked:bg-stone-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Masculine</label>
+      </div>
+      <div class="px-2" > 
+        <input id="exibir-femininos" type="radio" name="filtro" class="peer hidden" />
+        <label for="exibir-femininos" class="peer-checked:bg-stone-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Feminine</label>
+      </div> 
+      </section>
+    <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10"></section>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

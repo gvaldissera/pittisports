@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-stone-200 flex flex-col h-screen">
+    <header class="flex text-xl bg-stone-950 shadow-stone-500 shadow-lg px-6 py-4 justify-between sticky top-0 z-10">
+    <a href="./">
+        <img class='h-12' src="./assets/logo/pittisports4.png" alt="Logo do Magazine hashtag." />
+    </a>
+    </header>
+  <form class="flex w-100 px-5 gap-4 py-10 grow">
+    <section id="dados-usuario" class="w-1/3 bg-stone-300 rounded-sm py-5">
+        <p class="mb-5 text-center font-bold">Personal information</p>
+        <div class="flex flex-col px-10 py-3">
+            <label for="nome" class="font-bold text-sm mb-2 px-1">Name</label>
+            <input type="text" id="email" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="email" class="font-bold text-sm mb-2 px-1" required="">E-mail</label>
+            <input type="email" id="nome" class=" px-2 border border-stone-950 py-1" placeholder="example@email.com"/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="telefone" class="font-bold text-sm mb-2 px-1">Phone</label>
+            <input type="tel" id="telefone" class=" px-2 border border-stone-950 py-1" placeholder="+55 (11) 99999-9999"/>
+        </div>
+    </section>
+    <section id="pagamento-entrega" class="w-1/3 bg-stone-300 rounded-sm py-5"><p class="mb-5 text-center font-bold">Payment and Adress </p>
+        <div class="flex flex-col px-10 py-3">
+            <label for="numero-cartao" class="font-bold text-sm mb-2 px-1">Credit Card Number</label>
+            <input type="text" id="numero-cartao" placeholder="XXXX-XXXX-XXXX-XXXX" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        <div class="flex">     
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="CVV" class="font-bold text-sm mb-2 px-1">CVV</label>
+            <input type="text" id="cvv" placeholder="XXX" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        <div class="flex flex-col px-10 py-3 w-1/2">
+            <label for="data-expiracao" class="font-bold text-sm mb-2 px-1">Expiration</label>
+            <input type="text" id="data-expiracao" placeholder="12/23" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="cep" class="font-bold text-sm mb-2 px-1">Postal Code</label>
+            <input type="text" id="cep" placeholder="XXXXX-XX" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        <div class="flex flex-col px-10 py-3">
+            <label for="endereco" class="font-bold text-sm mb-2 px-1">Address</label>
+            <input type="text" id="endereco" required class=" px-2 border border-stone-950 py-1"/>
+        </div>
+        <div class="flex">     
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label for="numero" class="font-bold text-sm mb-2 px-1">Number</label>
+                <input type="text" id="number" placeholder="123" required class=" px-2 border border-stone-950 py-1"/>
+            </div>
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label for="complemento" class="font-bold text-sm mb-2 px-1">Complement</label>
+                <input type="text" id="complemento" placeholder="3rd floor" required class=" px-2 border border-stone-950 py-1"/>
+            </div>
+            </div>
+    </section>
+    <section id="produtos-checkout" class="w-1/3 bg-stone-300 rounded-sm py-5">
+        <section id="container-produtos-checkout" class="h-4/5 overflow-y-auto px-2"></section>
+        <section id="celula-checkout" class="flex flex-col px-2 h-1/5 justify-around">
+            <p id="preco-total" class="bg-slate-100 text-stone-950 rounded-sm pl-3">Subtotal: $200</p>
+    <button class="bg-stone-950 text-slate-200 p-2 hover:bg-stone-800" type="submit">checkout</button>
+        </section>
+    </section>
+  </form>
+  <script src="./checkout.js" type="module"></script>
+  </body>
+
+</html>
